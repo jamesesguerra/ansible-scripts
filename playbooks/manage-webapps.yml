@@ -7,4 +7,7 @@
       azure_rm_webapp:
         name: "avigilonmanager-dev"
         resource_group: "MonitoringPlatform"
+        azure_ad_user: "jesguerra@stealthmonitoring.com"
+        azure_password: "Uq6gQxCp"
+        subscription_id: 255cd4fe-3191-4011-bd2b-1569f4feba39
         app_state: "stopped"
