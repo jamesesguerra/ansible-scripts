@@ -7,3 +7,4 @@
         resource_group: "{{ resource_group }}"
         name: "{{ vm_name }}"
         started: false
+        auth_source: "credential_file"
