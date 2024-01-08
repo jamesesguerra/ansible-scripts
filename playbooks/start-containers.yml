@@ -1,0 +1,6 @@
+---
+- name: start containers
+  hosts: all
+  tasks:
+    - name: start containers
+      shell: "docker start sm-nginx"
