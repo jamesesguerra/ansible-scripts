@@ -1,6 +1,6 @@
 ---
 - name: Stop Azure VM
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Stop Azure VM
       azure.azcollection.azure_rm_virtualmachine:
