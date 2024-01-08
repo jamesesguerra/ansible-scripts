@@ -8,4 +8,4 @@
 
     - name: output containers
       debug:
-        msg: {{containers}}
+        msg: "{{containers}}"
