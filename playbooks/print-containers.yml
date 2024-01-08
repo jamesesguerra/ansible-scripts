@@ -3,9 +3,10 @@
   hosts: all
   tasks:
     - name: get containers
-      shell: "docker ps"
-      register: containers
+      docker_host_info:
+        containers: yes
+      register: docker_info
 
-    - name: output containers
+    - name: print info
       debug:
-        msg: "{{containers}}"
+        msg: "{{docker_info}}"
