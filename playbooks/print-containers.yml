@@ -1,0 +1,11 @@
+---
+- name: print containers
+  hosts: all
+  tasks:
+    - name: get containers
+      shell: "docker ps"
+      register: containers
+
+    - name: output containers
+      debug:
+        msg: containers
