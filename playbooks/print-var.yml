@@ -1,0 +1,7 @@
+---
+- name: print
+  hosts: all
+  tasks:
+  - name: print variable
+    debug:
+      msg: the variable is {{ testvar }}
