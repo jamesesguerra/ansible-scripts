@@ -1,0 +1,9 @@
+---
+- name: stop containers
+  hosts: all
+  tasks:
+    - name: stop containers
+      shell: "docker stop {{ container }}"
+      loop:
+        - sm-nginx
+        - sm-nginx2
