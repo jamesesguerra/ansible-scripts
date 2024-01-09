@@ -1,0 +1,8 @@
+---
+- name: pwsh test
+  hosts: all
+  tasks:
+    - name: run script
+      ansible.windows.win_powershell:
+        script: |
+          echo "Hello World"
