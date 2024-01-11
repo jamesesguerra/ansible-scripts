@@ -1,7 +1,6 @@
 ---
 - name: Start/Stop/Restart Azure Web App
-  hosts: stealth-devops-tools.eastus.cloudapp.azure.com
-  become: true
+  hosts: localhost
   tasks:
     - name: Execute start/stop/restart
       azure_rm_webapp:
@@ -11,4 +10,4 @@
         secret: 2hG8Q~Cc1qQedSyT.4DYoUdd_WoF1i.KTJTo3dvw
         subscription_id: 255cd4fe-3191-4011-bd2b-1569f4feba39
         tenant: 2fa83d3f-9212-4e3e-84bd-696e62e31766
-        app_state: "{{ state }}"
+        app_state: "stopped"
