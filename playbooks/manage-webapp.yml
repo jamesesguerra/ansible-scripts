@@ -4,8 +4,8 @@
   tasks:
     - name: Execute start/stop/restart
       azure_rm_webapp:
-        name: "avigilonmanager-dev"
-        resource_group: "MonitoringPlatform"
+        name: "{{ webapp }}"
+        resource_group: "{{ resource_group }}"
         client_id: 18ea066d-5471-4610-a6b7-680a881a8f9f
         secret: 2hG8Q~Cc1qQedSyT.4DYoUdd_WoF1i.KTJTo3dvw
         subscription_id: 255cd4fe-3191-4011-bd2b-1569f4feba39
