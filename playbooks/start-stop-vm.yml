@@ -2,7 +2,7 @@
 - name: Start / Stop Azure VM
   hosts: localhost
   tasks:
-    - name: Start / Stop Azure VM
+    - name: Execute Start / Stop VM
       azure.azcollection.azure_rm_virtualmachine:
         name: "{{ vm_name }}"
         resource_group: "{{ resource_group }}"
