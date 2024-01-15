@@ -1,13 +1,13 @@
 ---
-- name: Stop Azure VM
+- name: Start / Stop Azure VM
   hosts: localhost
   tasks:
-    - name: Stop Azure VM
+    - name: Start / Stop Azure VM
       azure.azcollection.azure_rm_virtualmachine:
-        resource_group: "rg-devops-playground"
-        name: "ansible-test"
+        name: "{{ vm_name }}"
+        resource_group: "{{ resource_group }}"
         client_id: 18ea066d-5471-4610-a6b7-680a881a8f9f
         secret: 2hG8Q~Cc1qQedSyT.4DYoUdd_WoF1i.KTJTo3dvw
         subscription_id: 255cd4fe-3191-4011-bd2b-1569f4feba39
         tenant: 2fa83d3f-9212-4e3e-84bd-696e62e31766
-        started: false
+        started: "{{ state }}"
