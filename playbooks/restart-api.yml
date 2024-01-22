@@ -1,0 +1,21 @@
+---
+- name: Restart API
+  hosts: localhost
+  tasks:
+    - name: Log in to Azure
+      ansible.builtin.shell:
+        cmd: az login --user {{ USERNAME }} --password {{ PASSWORD }}
+
+    - name: Set Subscription
+      ansible.builtin.shell:
+        cmd: |
+          az account set --subscription "Pay-As-You-Go Dev/Test"
+    
+    - name: Get Cluster Credentials
+      ansible.builtin.shell:
+        cmd: |
+          az aks get-credentials --resource-group APIs-Cluster-Staging --name  APIs-Cluster-Staging --admin --overwrite-existing
+
+    - name: Delete Pod of API/s
+      ansible.builtin.shell:
+        cmd: "kubectl delete pods -n {{ env }} -l app={{ app }}"
