@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name: Execute Start / Stop VM
-      azure.azcollection.azure_rm_virtualmachine:
+      azure_rm_virtualmachine:
         name: "{{ vm_name }}"
         resource_group: "{{ resource_group }}"
         client_id: 18ea066d-5471-4610-a6b7-680a881a8f9f
