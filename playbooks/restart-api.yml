@@ -1,6 +1,6 @@
 ---
 - name: Restart API
-  hosts: stealth-devops-tools.eastus.cloudapp.azure.com
+  hosts: localhost
   tasks:
     - name: Log in to Azure
       ansible.builtin.shell:
