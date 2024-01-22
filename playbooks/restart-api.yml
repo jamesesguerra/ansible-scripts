@@ -1,6 +1,6 @@
 ---
 - name: Restart API
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Log in to Azure
       ansible.builtin.shell:
