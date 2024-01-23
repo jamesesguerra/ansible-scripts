@@ -3,7 +3,5 @@
   hosts: localhost
   tasks:
     - name: start containers
-      shell: "docker start {{ container }}"
-      loop:
-        - sm-nginx
-        - sm-nginx2
+      shell: "docker start {{ item }}"
+      loop: "{{ containers }}"
