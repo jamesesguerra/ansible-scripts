@@ -1,9 +1,7 @@
 ---
 - name: stop containers
-  hosts: all
+  hosts: localhost
   tasks:
     - name: stop containers
       shell: "docker stop {{ item }}"
-      loop:
-        - sm-nginx
-        - sm-nginx2
+      loop: "{{ containers }}"
