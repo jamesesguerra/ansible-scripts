@@ -1,6 +1,6 @@
 ---
 - name: start containers
-  hosts: localhost
+  hosts: all
   tasks:
     - name: start containers
       shell: "docker start {{ item }}"
