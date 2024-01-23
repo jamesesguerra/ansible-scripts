@@ -1,7 +1,7 @@
 ---
-- name: start containers
+- name: Start Containers
   hosts: all
   tasks:
-    - name: start containers
+    - name: Execute docker start
       shell: "docker start {{ item }}"
       loop: "{{ containers }}"
