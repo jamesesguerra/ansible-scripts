@@ -3,5 +3,5 @@
   hosts: all
   tasks:
     - name: Execute docker start
-      shell: "docker start {{ item }}"
+      shell: "docker {{ action }} {{ item }}"
       loop: "{{ containers }}"
