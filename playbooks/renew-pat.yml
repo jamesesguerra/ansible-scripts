@@ -5,9 +5,6 @@
   tasks:
     - name: Execute renew PAT script
       shell:
-        cmd: pwsh pwsh-scripts/Renew-PAT.ps1
-      register: output
-
-    - name: display output
-      debug:
-        msg: "{{ output }}"
+        cmd: |
+          cd pwsh-scripts
+          pwsh Renew-PAT.ps1
