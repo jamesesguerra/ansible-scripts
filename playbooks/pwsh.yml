@@ -4,6 +4,6 @@
   become: true
   tasks:
     - name: Execute renew PAT script
-      win_powershell:
+      ansible.windows.win_powershell:
         script: |
           New-Item -ItemType File -Path ".\newfile.txt"
