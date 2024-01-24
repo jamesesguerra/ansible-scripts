@@ -4,4 +4,5 @@
   become: true
   tasks:
     - name: Execute renew PAT script
-      script: ../scripts/Renew-PAT.ps1
+      shell:
+        cmd: pwsh pwsh-scripts/Renew-PAT.ps1
