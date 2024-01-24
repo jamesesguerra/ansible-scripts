@@ -5,6 +5,5 @@
   tasks:
     - name: Execute renew PAT script
       shell:
-        cmd: |
-          cd pwsh-scripts
-          pwsh Renew-PAT.ps1
+        chdir: pwsh-scripts/
+        cmd: pwsh Renew-PAT.ps1
