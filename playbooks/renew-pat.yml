@@ -1,6 +1,7 @@
 ---
 - name: Renew PAT
   hosts: all
+  become: true
   tasks:
     - name: Execute renew PAT script
       script: /home/azureuser/scripts/Renew-PAT.ps1
