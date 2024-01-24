@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: Execute renew PAT script
-      script: /home/azureuser/scripts/Renew-PAT.ps1
+      script: ../scripts/Renew-PAT.ps1
