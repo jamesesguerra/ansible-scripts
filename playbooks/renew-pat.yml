@@ -1,0 +1,6 @@
+---
+- name: Renew PAT
+  hosts: all
+  tasks:
+    - name: Execute renew PAT script
+      script: ./scripts/Renew-PAT.ps1
