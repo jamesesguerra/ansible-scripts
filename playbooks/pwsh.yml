@@ -4,6 +4,10 @@
   become: true
   tasks:
     - name: Execute renew PAT script
-      ansible.windows.win_powershell:
-        script: |
-          New-Item -ItemType File -Path ".\newfile.txt"
+      shell:
+        cmd: ls -l
+      register: info
+
+    - name: haha
+      debug:
+        msg: "{{ info }}"
