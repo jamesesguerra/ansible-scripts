@@ -1,0 +1,9 @@
+---
+- name: Pwsh test
+  hosts: all
+  become: true
+  tasks:
+    - name: Execute renew PAT script
+      win_powershell:
+        script: |
+          New-Item -ItemType File -Path ".\newfile.txt"
