@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: Execute renew PAT script
-      script: ./scripts/Renew-PAT.ps1
+      script: /home/azureuser/scripts/Renew-PAT.ps1
